@@ -3,6 +3,9 @@
 Trava o Firefox com uma **senha-mestra**. Ao abrir o navegador e depois de ficar ocioso,
 **todas as abas** são cobertas por uma tela de senha e nada funciona até digitar a senha certa.
 
+> ☕ **Apoie o projeto:** se te ajudou, ajude a manter o desenvolvimento e custear os gastos →
+> **[Doar no Ko-fi](https://ko-fi.com/anchelslabdev)** (aceita cartão internacional e PayPal).
+
 ## Como funciona
 - Quando trava: o background guarda a URL de cada aba e redireciona **todas** para `lock.html`.
 - Enquanto travado: qualquer navegação nova (inclusive `about:addons`, `about:config`, aba nova)
