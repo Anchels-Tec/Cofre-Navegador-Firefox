@@ -1,5 +1,8 @@
 # Notas de versão — Cofre do Navegador
 
+## 1.0.3
+- **Novo ícone:** cadeado mais nítido e reconhecível, legível até no tamanho da barra de ferramentas.
+
 ## 1.0.2
 Correções e melhorias de estabilidade e primeira instalação.
 
