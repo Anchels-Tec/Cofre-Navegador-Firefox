@@ -1,5 +1,8 @@
 # Notas de versão — Cofre do Navegador
 
+## 1.0.4
+- Publicação no canal listado do AMO (versão pública). Sem mudanças de funcionamento em relação à 1.0.3.
+
 ## 1.0.3
 - **Novo ícone:** cadeado mais nítido e reconhecível, legível até no tamanho da barra de ferramentas.
 
