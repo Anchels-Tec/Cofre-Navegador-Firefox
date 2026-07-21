@@ -1,0 +1,15 @@
+{
+  "policies": {
+    "BlockAboutAddons": true,
+    "BlockAboutConfig": true,
+    "BlockAboutSupport": true,
+    "DisableSafeMode": true,
+    "DisableDeveloperTools": false,
+    "ExtensionSettings": {
+      "cofre-navegador@ailan": {
+        "installation_mode": "force_installed",
+        "install_url": "file:///C:/Caminho/Para/cofre-navegador.xpi"
+      }
+    }
+  }
+}

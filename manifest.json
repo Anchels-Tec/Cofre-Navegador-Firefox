@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Cofre do Navegador",
+  "version": "1.0.2",
+  "description": "Trava o Firefox com uma senha-mestra: ao abrir e apos ficar ocioso, cobre todas as abas e so libera com a senha.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cofre-navegador@ailan",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  },
+  "icons": { "48": "icons/lock.svg", "96": "icons/lock.svg" },
+  "permissions": ["storage", "tabs", "idle", "webNavigation"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "scripts": ["common.js", "background.js"] },
+  "action": {
+    "default_title": "Cofre do Navegador",
+    "default_popup": "popup.html",
+    "default_icon": { "48": "icons/lock.svg" }
+  },
+  "options_ui": { "page": "options.html", "open_in_tab": true }
+}

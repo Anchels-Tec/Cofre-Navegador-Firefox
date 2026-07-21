@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cofre do Navegador — Configurações</title>
+  <link rel="stylesheet" href="ui.css">
+  <style> body { padding: 24px; } .panel { margin: 0 auto; } h3 { margin: 22px 0 6px; font-size: 14px; } </style>
+</head>
+<body>
+  <div class="panel">
+    <h2>🔐 Cofre do Navegador</h2>
+    <p class="hint">Trava o Firefox com uma senha-mestra. Ao abrir o navegador e após ficar ocioso, todas as abas são cobertas por uma tela de senha.</p>
+
+    <div id="bemvindo" hidden style="margin:12px 0;padding:10px 12px;border-radius:10px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.35);font-size:13px;">
+      👋 <b>Bem-vindo!</b> Para começar, crie sua <b>senha-mestra</b> abaixo. É ela que vai desbloquear o navegador.
+    </div>
+
+    <h3 id="tit-senha">Senha-mestra</h3>
+    <div id="campo-atual" hidden>
+      <label for="atual">Senha atual</label>
+      <input type="password" id="atual" autocomplete="off">
+    </div>
+    <label for="nova">Nova senha</label>
+    <input type="password" id="nova" autocomplete="off">
+    <label for="nova2">Repita a nova senha</label>
+    <input type="password" id="nova2" autocomplete="off">
+    <button class="primary" id="btn-senha">Salvar senha</button>
+    <div class="ok" id="msg-senha"></div>
+
+    <h3>Comportamento</h3>
+    <div class="row">
+      <div><b style="font-size:13px;">Travar ao abrir o Firefox</b><div class="hint">Pede a senha logo na abertura.</div></div>
+      <input type="checkbox" id="lockStartup" style="width:auto;">
+    </div>
+    <div class="row">
+      <div><b style="font-size:13px;">Travar por ociosidade</b><div class="hint">Minutos parado até travar sozinho (0 = desliga).</div></div>
+      <input type="number" id="idle" min="0" max="120" style="width:80px;">
+    </div>
+    <button class="primary" id="btn-cfg">Salvar comportamento</button>
+    <div class="ok" id="msg-cfg"></div>
+
+    <h3>Testar</h3>
+    <button class="ghost" id="btn-lock">🔒 Travar agora</button>
+
+    <h3>⚠ Importante (leia)</h3>
+    <p class="hint">
+      Isto é um <b>impeditivo</b>, não segurança de nível militar. Um usuário avançado pode
+      desligar a extensão pelo <code>about:addons</code> ou pelo Modo de Segurança. Enquanto travado,
+      a extensão já joga o <code>about:addons</code> de volta pra tela de senha, mas para travar
+      <b>de verdade</b> use o arquivo <code>policies.example.json</code> (BlockAboutAddons +
+      DisableSafeMode) — veja o <b>README</b>. E lembre: extensão não assinada instalada por
+      <code>about:debugging</code> some ao fechar o Firefox; leia o README pra deixar permanente.
+    </p>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

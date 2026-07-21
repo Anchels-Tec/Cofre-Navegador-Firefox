@@ -1,0 +1,10 @@
+# pacotes gerados (use Releases do GitHub pra distribuir o .xpi)
+*.xpi
+*.zip
+
+# sistema / editor
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.web-extension-id

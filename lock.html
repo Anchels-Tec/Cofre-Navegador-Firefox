@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navegador travado</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <div class="lock-wrap">
+    <div class="card" id="card">
+      <div class="pad">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10.5" width="16" height="10" rx="2.5" fill="#3b82f6" fill-opacity="0.18"/>
+          <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>
+        </svg>
+      </div>
+
+      <!-- modo destravar -->
+      <div id="modo-unlock" hidden>
+        <h1>Navegador travado</h1>
+        <p class="sub">Digite a senha-mestra para continuar.</p>
+        <label for="pw">Senha</label>
+        <input type="password" id="pw" autocomplete="off" autofocus>
+        <button class="primary" id="btn-unlock">Desbloquear</button>
+        <div class="err" id="err"></div>
+      </div>
+
+      <!-- modo criar senha (1ª vez) -->
+      <div id="modo-setup" hidden>
+        <h1>Criar senha-mestra</h1>
+        <p class="sub">Nenhuma senha configurada ainda. Defina uma para proteger o navegador.</p>
+        <label for="np">Nova senha</label>
+        <input type="password" id="np" autocomplete="off">
+        <label for="np2">Repita a senha</label>
+        <input type="password" id="np2" autocomplete="off">
+        <button class="primary" id="btn-setup">Salvar e travar</button>
+        <div class="err" id="err2"></div>
+      </div>
+    </div>
+  </div>
+  <script src="lock.js"></script>
+</body>
+</html>
